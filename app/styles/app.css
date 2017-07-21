@@ -1,0 +1,11 @@
+@import "normalize.css";
+@import "webflow.css";
+@import "faststack.webflow.css";
+
+button{
+  background: transparent;
+  outline: none;
+}
+button:active{
+  outline: none;
+}

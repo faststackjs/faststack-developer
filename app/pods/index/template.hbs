@@ -1,0 +1,35 @@
+<div class="home-header">
+  {{svg-jar "logo" class="home-header-logo"}}
+</div>
+<div class="home-projects">
+    {{#each model as |project|}}
+    <div class="home-project">
+      {{#link-to 'app' project.id class="home-project-link w-inline-block"}}
+        <div class="home-project-icon">PM</div>
+        <div class="home-project-name">{{project.name}}</div>
+      {{/link-to}}
+      <button class="home-project-edit w-button" {{action 'editProject' project}}></button>
+    </div>
+    {{/each}}
+  <div class="add home-project">
+      <button class="add home-project-link w-inline-block" {{action 'createProject' true}}>Create New Project</button>
+      <button class="add home-project-link w-inline-block" {{action 'createProject'}}>Add Existing Project</button>
+  </div>
+</div>
+
+{{#if projectForm}}
+  {{#pop-up title="New Project" close=(action 'closeProject' projectForm) save=(action 'saveProject' projectForm)}}
+    {{#if messages}}<div class="error-messages">{{messages}}</div>{{/if}}
+   {{#if projectForm.new}}
+     <label for="name">Project Name</label>
+     {{input value=projectForm.name class="input w-input" type="text"}}
+   {{/if}}
+    <label for="name">Path</label>
+    <button class="input w-input" {{action 'selectDirectory' projectForm}}>{{projectForm.id}}</button>
+    {{#if projectForm.id}}
+      <div class="w-clearfix">
+        <button class="danger panel-item-button w-button" {{action 'deleteProject' projectForm }}>Delete Project</button>
+      </div>
+    {{/if}}
+  {{/pop-up}}
+{{/if}}

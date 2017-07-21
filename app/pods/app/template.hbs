@@ -1,0 +1,183 @@
+{{top-nav class="top-bar w-clearfix"}}
+{{main-nav class="main-nav" model=model}}
+{{outlet}}
+
+
+
+{{!-- <div class="breadcrumb main-page">
+
+
+  <div class="panel">
+    <div class="panel-header w-clearfix">
+      <div class="panel-header-title">Settings</div>
+      <a class="edit panel-header-button w-button" href="#"></a>
+    </div>
+    <div class="panel-body">
+      <div class="model-box-body">
+            <label for="name-2">Name</label>
+            <input class="input w-input" data-name="Name 2" id="name-2" maxlength="256" name="name-2" type="text">
+            <label for="name-2">Type</label>
+            <select class="select w-select" data-name="Field 2" id="field-2" name="field-2"></select>
+            <div class="group-input w-clearfix">
+              <div class="group-input-one"><label for="name-2">Max</label><input class="input w-input" data-name="Name 2" id="name-2" maxlength="256" name="name-2" type="text"></div>
+              <div class="group-input-one last"><label for="name-2">Min</label><input class="input w-input" data-name="Name 2" id="name-2" maxlength="256" name="name-2" type="text"></div>
+            </div>
+            <div class="group-input w-clearfix">
+              <div class="group-input-two"><label for="name-3">Key</label><input class="input w-input" data-name="Name 2" id="name-2" maxlength="256" name="name-2" type="text"></div>
+              <div class="group-input-two"><label for="field-2">Operator</label><select class="select w-select" data-name="Field 2" id="field-2" name="field-2"></select></div>
+              <div class="group-input-two last"><label for="name-3">Value</label><input class="input w-input" data-name="Name 2" id="name-2" maxlength="256" name="name-2" type="text"></div>
+            </div>
+            <div class="input-toggle w-clearfix">
+              <div class="input-toggle-title">Status</div>
+              <a class="active input-toggle-button w-inline-block" href="#">
+                <div class="active input-toggle-button-switch"></div>
+                <div>ON</div>
+              </a>
+            </div>
+            <div class="input-toggle w-clearfix">
+              <div class="input-toggle-title">Status</div>
+              <a class="input-toggle-button w-inline-block" href="#">
+                <div class="input-toggle-button-switch"></div>
+                <div class="text-block-2">OFF</div>
+              </a>
+            </div>
+      </div>
+    </div>
+    <div class="model-box-fotter">
+      <a class="model-box-fotter-button w-inline-block" href="#">
+        <div>Save</div>
+      </a>
+      <a class="cancel model-box-fotter-button w-inline-block" href="#">
+        <div>Cancel</div>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="panel">
+    <div class="panel-header w-clearfix">
+      <div class="panel-header-title">Methods</div>
+      <div class="method panel-header-icon"></div>
+      <a class="panel-header-button w-button" href="#">+</a>
+    </div>
+    <div class="panel-body">
+      <div class="panel-item w-clearfix">
+        <div class="panel-item-icon">GET</div>
+        <div class="panel-item-info">
+          <div class="panel-item-info-title">Users</div>
+          <div class="panel-item-info-sub">find.js</div>
+        </div><a class="green panel-item-button w-button" href="#">Installed</a>
+        <a class="blue panel-item-button w-button" href="#">Install</a>
+        <a class="panel-item-button w-button" href="#">Edit</a>
+        <a class="danger panel-item-button w-button" href="#">D</a>
+      </div>
+      <div class="panel-item w-clearfix"><a class="panel-item-button w-button" href="#">Edit</a>
+        <div class="green panel-item-icon">POST</div>
+        <div class="panel-item-info">
+          <div class="panel-item-info-title">User</div>
+          <div class="panel-item-info-sub">create.js</div>
+        </div><a class="danger panel-item-button w-button" href="#">D</a></div>
+      <div class="panel-item w-clearfix"><a class="panel-item-button w-button" href="#">Edit</a>
+        <div class="orange panel-item-icon">PUT</div>
+        <div class="panel-item-info">
+          <div class="panel-item-info-title">User</div>
+          <div class="panel-item-info-sub">update.js</div>
+        </div><a class="danger panel-item-button w-button" href="#">D</a></div>
+      <div class="panel-item w-clearfix"><a class="panel-item-button w-button" href="#">Edit</a>
+        <div class="panel-item-icon red">DELETE</div>
+        <div class="panel-item-info">
+          <div class="panel-item-info-title">User</div>
+          <div class="panel-item-info-sub">delete.js</div>
+        </div><a class="danger panel-item-button w-button" href="#">D</a></div>
+      <div class="panel-body-end">End</div>
+    </div>
+  </div>
+
+
+  <div class="panel">
+    <div class="panel-header w-clearfix">
+      <div class="panel-header-title">Endpoints</div><a class="panel-header-button w-button" href="#">+</a>
+      <div class="panel-header-icon route"></div>
+    </div>
+    <div class="panel-body">
+      <a class="sub-nav-link w-clearfix w-inline-block" href="#">
+        <div class="sub-nav-link-title">Users/:id</div><img class="sub-nav-link-icon" src="images/right-arrow.svg" width="30"></a>
+      <a class="sub-nav-link w-clearfix w-inline-block" href="#">
+        <div class="sub-nav-link-title">/Users/me</div><img class="sub-nav-link-icon" src="images/right-arrow.svg" width="30"></a>
+      <a class="sub-nav-link w-clearfix w-inline-block" href="#">
+        <div class="sub-nav-link-title">/Users/delete</div><img class="sub-nav-link-icon" src="images/right-arrow.svg" width="30"></a>
+      <div class="panel-body-end">End</div>
+    </div>
+  </div>
+
+
+  <div class="panel">
+    <div class="panel-header w-clearfix">
+      <div class="panel-header-icon"></div>
+      <div class="panel-header-title">Layers</div><a class="panel-header-button w-button" href="#">+</a></div>
+    <div class="panel-body">
+      <div class="layers">
+        <div class="layers-line"></div>
+        <div class="layer">
+          <div class="layer-box w-clearfix"><a class="layer-box-drag w-button" href="#"></a>
+            <div class="layer-box-title">isAdmin</div>
+            <div class="layer-box-title sub">isAdmin.js</div><a class="layer-box-delete w-button" href="#"></a></div>
+          <div class="layer-box-point"></div>
+        </div>
+        <div class="layer">
+          <div class="layer-box w-clearfix"><a class="layer-box-drag w-button" href="#"></a>
+            <div class="layer-box-title">Create Model</div>
+            <div class="layer-box-title sub">createMode.js</div><a class="layer-box-delete w-button" href="#"></a></div>
+          <div class="layer-box-point"></div>
+        </div>
+        <div class="layer">
+          <div class="layer-box w-clearfix"><a class="layer-box-drag w-button" href="#"></a>
+            <div class="layer-box-title">Return JSON</div>
+            <div class="layer-box-title sub">returnJSON.js</div><a class="layer-box-delete w-button" href="#"></a></div>
+          <div class="layer-box-point"></div>
+        </div>
+      </div>
+      <div class="panel-body-end">End</div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="model">
+  <a class="model-close w-inline-block" href="#"></a>
+  <div class="model-body">
+    <div class="model-box">
+      <div class="model-box-header">
+        <div class="text-block">Model Name</div>
+      </div>
+      <div class="model-box-body">
+        <label for="field">Route Name</label>
+        <select class="select w-select" id="field" name="field"></select>
+        <label for="name">Route Name</label>
+        <input class="input w-input" data-name="Name" id="name" maxlength="256" name="name" type="text">
+        <div class="input-toggle w-clearfix">
+          <div class="input-toggle-title">Required</div>
+          <a class="input-toggle-button w-inline-block" href="#">
+            <div class="input-toggle-button-switch"></div>
+            <div>OFF</div>
+          </a>
+        </div>
+      </div>
+      <div class="model-box-fotter">
+        <a class="model-box-fotter-button w-inline-block" href="#">
+          <div>Save</div>
+        </a>
+        <a class="cancel model-box-fotter-button w-inline-block" href="#">
+          <div>Cancel</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div> --}}

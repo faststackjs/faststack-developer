@@ -1,0 +1,33 @@
+{{#link-to 'app.index' class="main-nav-link w-clearfix w-inline-block"}}
+  <div class="main-nav-link-name">{{model.name}}</div>
+{{/link-to}}
+{{#link-to 'app.routes' class="main-nav-link w-clearfix w-inline-block"}}
+  {{svg-jar "network" class="main-nav-link-icon" width="25" height="25"}}
+  <div class="main-nav-link-name">Routes <span>{{model.routes.length}}</span></div>
+{{/link-to}}
+{{#link-to 'app.layers' class="main-nav-link w-clearfix w-inline-block"}}
+  {{svg-jar "layers" class="main-nav-link-icon" width="25" height="25"}}
+  <div class="main-nav-link-name">Layers</div>
+{{/link-to}}
+{{#link-to 'app.models' class="main-nav-link w-clearfix w-inline-block"}}
+  {{svg-jar "database" class="main-nav-link-icon" width="25" height="25"}}
+  <div class="main-nav-link-name">Models</div>
+{{/link-to}}
+{{#link-to 'app.connections' class="main-nav-link w-clearfix w-inline-block"}}
+  {{svg-jar "more" class="main-nav-link-icon" width="25" height="25"}}
+  <div class="main-nav-link-name">Connections</div>
+{{/link-to}}
+{{!-- {{#link-to 'app.views' class="main-nav-link w-clearfix w-inline-block"}}
+  {{svg-jar "tabs" class="main-nav-link-icon" width="25" height="25"}}
+  <div class="main-nav-link-name">Views</div>
+{{/link-to}}
+{{#link-to 'app.access' class="main-nav-link w-clearfix w-inline-block"}}
+  {{svg-jar "hold" class="main-nav-link-icon" width="25" height="25"}}
+  <div class="main-nav-link-name">Access</div>
+{{/link-to}} --}}
+{{!-- {{#link-to 'app.settings' class="main-nav-link w-clearfix w-inline-block"}}
+  {{svg-jar "settings" class="main-nav-link-icon" width="25" height="25"}}
+  <div class="main-nav-link-name">Settings</div>
+{{/link-to}} --}}
+
+<div class="main-nav-version">Version {{model.version}}</div>

@@ -1,0 +1,38 @@
+<div class="breadcrumbs">
+  <a class="breadcrumbs-links w-inline-block" href="#">
+    <div class="main-page-breadcrumbs-crumb">Route</div>
+  </a>
+  {{!-- <a class="breadcrumbs-links w-inline-block" href="#">
+    <img class="main-page-breadcrumbs-icon" src="images/right-arrow.svg" width="35">
+    <div class="main-page-breadcrumbs-crumb">:id</div>
+  </a>
+  <a class="breadcrumbs-links w-inline-block" href="#">
+    <img class="main-page-breadcrumbs-icon" src="images/right-arrow.svg" width="35">
+    <div class="main-page-breadcrumbs-crumb">Delete</div>
+  </a> --}}
+</div>
+
+<div class="breadcrumb sub-nav">
+  {{#each model as |route|}}
+    {{sub-nav-link link="app.routes.route" id=route.id title=route.name}}
+  {{/each}}
+  <div class="sub-nav-box">
+    <button class="sub-nav-button w-button" {{action 'createRoute'}}>New Route</button>
+  </div>
+</div>
+<div class="breadcrumb main-page">{{outlet}}</div>
+
+
+
+
+{{#if routeForm}}
+  {{#pop-up title="New Route" close=(action 'close' routeForm) save=(action 'save' routeForm)}}
+    <label for="name">Route Name</label>
+    {{input value=routeForm.name class="input w-input" type="text"}}
+    {{#if routeForm.id}}
+      <div class="w-clearfix">
+        <button class="danger panel-item-button w-button" {{action 'delete' routeForm}}>Delete Route</button>
+      </div>
+    {{/if}}
+  {{/pop-up}}
+{{/if}}

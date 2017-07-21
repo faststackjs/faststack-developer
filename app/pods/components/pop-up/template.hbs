@@ -1,0 +1,15 @@
+<button class="model-close w-inline-block" {{action 'close'}}></button>
+<div class="model-body">
+  <div class="model-box">
+    <div class="model-box-header">
+      <div class="text-block">{{title}}</div>
+    </div>
+    <div class="model-box-body">
+      {{yield}}
+    </div>
+    <div class="model-box-fotter">
+      <button class="model-box-fotter-button w-inline-block" {{action 'save'}}> Save </button>
+      <button class="cancel model-box-fotter-button w-inline-block" {{action 'close'}}> Cancel </button>
+    </div>
+  </div>
+</div>

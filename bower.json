@@ -1,0 +1,6 @@
+{
+  "name": "faststack-developer",
+  "dependencies": {
+    "node-uuid": "1.4.1"
+  }
+}

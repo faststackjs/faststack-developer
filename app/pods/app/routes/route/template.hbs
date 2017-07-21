@@ -1,0 +1,98 @@
+<div class="panel">
+  <div class="panel-header w-clearfix">
+    <div class="panel-header-title">Methods</div>
+    <div class="method panel-header-icon"></div>
+  </div>
+  <div class="panel-body">
+    <div class="panel-item w-clearfix">
+      <div class="panel-item-info">
+        <div class="panel-item-info-title">All</div>
+        <div class="panel-item-info-sub">Layers {{model.all.length}}</div>
+      </div>
+      <button class="panel-item-button w-button" {{action 'editRoute' 'all'}}>Edit</button>
+    </div>
+    <div class="panel-item w-clearfix">
+      <div class="panel-item-icon">GET</div>
+      <div class="panel-item-info">
+        <div class="panel-item-info-title">/</div>
+        <div class="panel-item-info-sub">Layers {{model.geet.length}}</div>
+      </div>
+      <button class="panel-item-button w-button">Edit</button>
+    </div>
+    <div class="panel-item w-clearfix">
+      <div class="panel-item-icon green">POST</div>
+      <div class="panel-item-info">
+        <div class="panel-item-info-title">/</div>
+        <div class="panel-item-info-sub">Layers {{model.post.length}}</div>
+      </div>
+      <button class="panel-item-button w-button">Edit</button>
+    </div>
+    <div class="panel-item w-clearfix">
+      <div class="panel-item-icon orange">PUT</div>
+      <div class="panel-item-info">
+        <div class="panel-item-info-title">/</div>
+        <div class="panel-item-info-sub">Layers {{model.put.length}}</div>
+      </div>
+      <button class="panel-item-button w-button">Edit</button>
+    </div>
+    <div class="panel-item w-clearfix">
+      <div class="panel-item-icon red">Delete</div>
+      <div class="panel-item-info">
+        <div class="panel-item-info-title">/</div>
+        <div class="panel-item-info-sub">Layers {{model.delete.length}}</div>
+      </div>
+      <button class="panel-item-button w-button">Edit</button>
+    </div>
+  </div>
+</div>
+
+
+{{!-- <div class="panel">
+  <div class="panel-header w-clearfix">
+    <div class="panel-header-title">Endpoints</div>
+    <a class="panel-header-button w-button" href="#">+</a>
+    <div class="panel-header-icon route"></div>
+  </div>
+  <div class="panel-body">
+    <a class="sub-nav-link w-clearfix w-inline-block" href="#">
+      <div class="sub-nav-link-title">Users/:id</div>
+      {{svg-jar "right-arrow" class="sub-nav-link-icon" width="30" height="30"}}
+    </a>
+    <a class="sub-nav-link w-clearfix w-inline-block" href="#">
+      <div class="sub-nav-link-title">/Users/me</div>
+      {{svg-jar "right-arrow" class="sub-nav-link-icon" width="30" height="30"}}
+    </a>
+    <a class="sub-nav-link w-clearfix w-inline-block" href="#">
+      <div class="sub-nav-link-title">/Users/delete</div>
+      {{svg-jar "right-arrow" class="sub-nav-link-icon" width="30" height="30"}}
+    </a>
+    <div class="panel-body-end">End</div>
+  </div>
+</div>
+ --}}
+
+ {{#if editForm}}
+   {{#pop-up title="Edit" close=(action 'closeForm' model) save=(action 'saveForm' model)}}
+         <div class="layers">
+           <div class="layers-line"></div>
+           <div class="layer">
+             <div class="layer-box w-clearfix"><a class="layer-box-drag w-button" href="#"></a>
+               <div class="layer-box-title">isAdmin</div>
+               <div class="layer-box-title sub">isAdmin.js</div><a class="layer-box-delete w-button" href="#"></a></div>
+             <div class="layer-box-point"></div>
+           </div>
+           <div class="layer">
+             <div class="layer-box w-clearfix"><a class="layer-box-drag w-button" href="#"></a>
+               <div class="layer-box-title">Create Model</div>
+               <div class="layer-box-title sub">createMode.js</div><a class="layer-box-delete w-button" href="#"></a></div>
+             <div class="layer-box-point"></div>
+           </div>
+           <div class="layer">
+             <div class="layer-box w-clearfix"><a class="layer-box-drag w-button" href="#"></a>
+               <div class="layer-box-title">Return JSON</div>
+               <div class="layer-box-title sub">returnJSON.js</div><a class="layer-box-delete w-button" href="#"></a></div>
+             <div class="layer-box-point"></div>
+           </div>
+         </div>
+   {{/pop-up}}
+ {{/if}}
